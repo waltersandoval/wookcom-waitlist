@@ -1,6 +1,47 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+function formatDiscordMessage(payload: LeadPayload): string {
+  return `📨 **Nuevo lead Wookcom**\n` +
+    `>>> **Nombre:** ${payload.name}\n` +
+    `**Contacto:** ${payload.contact}\n` +
+    `**Tipo de negocio:** ${payload.businessType}\n` +
+    `**Quiere que el operador haga:** ${payload.desiredOperator}\n` +
+    `**Herramientas actuales:** ${payload.currentTools || "No indicado"}\n` +
+    `**Miedo/duda:** ${payload.mainConcern || "No indicado"}\n` +
+    `**Fuente:** ${payload.source}\n` +
+    `**Fecha:** ${payload.submittedAt}`;
+}
+
+async function sendDiscord(payload: LeadPayload) {
+  const botToken = process.env.DISCORD_BOT_TOKEN;
+  const channelId = process.env.DISCORD_LEADS_CHANNEL_ID;
+
+  if (!botToken || !channelId) {
+    console.warn("Wookcom lead (Discord no configurado)");
+    return { ok: false, reason: "Discord not configured" };
+  }
+
+  const response = await fetch(
+    `https://discord.com/api/v10/channels/${channelId}/messages`,
+    {
+      method: "POST",
+      headers: {
+        "Authorization": `Bot ${botToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ content: formatDiscordMessage(payload) }),
+    }
+  );
+
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(`Discord API ${response.status}: ${err}`);
+  }
+
+  return { ok: true };
+}
+
 type LeadPayload = {
   name: string;
   contact: string;
@@ -125,10 +166,11 @@ export async function POST(request: Request) {
     );
   }
 
+  // Email: bloqueante (falla si no se puede enviar)
   try {
     const result = await sendEmail(payload);
     if (!result.ok) {
-      console.error("Lead guardado pero email no enviado — SMTP sin configurar");
+      console.error("Lead recibido pero email no enviado — SMTP sin configurar");
     }
   } catch (error) {
     console.error("Error al enviar lead por email:", error);
@@ -137,6 +179,11 @@ export async function POST(request: Request) {
       { status: 502 }
     );
   }
+
+  // Discord: no bloqueante (si falla no afecta al usuario)
+  sendDiscord(payload).catch((err) =>
+    console.error("Error al enviar lead a Discord:", err)
+  );
 
   return NextResponse.redirect(new URL("/gracias", request.url), { status: 303 });
 }
