@@ -7,3 +7,4 @@ out
 dist
 *.log
 screenshot-*.png
+reference-*.png

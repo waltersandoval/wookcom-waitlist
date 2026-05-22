@@ -44,20 +44,24 @@ export default function Home() {
       <section className="hero" id="inicio">
         <nav className="nav" aria-label="Principal">
           <a className="brand" href="#inicio" aria-label="Wookcom inicio">
-            <span className="brandMark">W</span>
-            <span>Wookcom</span>
+            <img src="/brand/wookcom-logo.png" alt="Wookcom" />
           </a>
           <div className="navLinks">
             <a href="#incluye">Incluye</a>
             <a href="#precio">Precio</a>
-            <a href="#formulario">Aplicar</a>
+            <a className="navCta" href="#formulario">Aplicar</a>
           </div>
         </nav>
+        <div className="blueRibbon">Empieza con una sesion de valoracion.</div>
 
         <div className="heroGrid">
           <div className="heroCopy">
             <p className="eyebrow">Cupos fundadores en USD</p>
-            <h1>Monta tu primer operador IA en 7 dias</h1>
+            <h1>
+              Monta tu primer <span>operador IA</span>
+              <br />
+              en 7 dias
+            </h1>
             <p className="lead">
               Wookcom convierte tus herramientas de IA sueltas en un sistema de trabajo
               con memoria de tu negocio, flujos utiles y reglas de seguridad.
