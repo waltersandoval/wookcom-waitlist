@@ -430,13 +430,21 @@ h3 {
   margin: 0 0 14px;
 }
 
-.highlighted {
+.pricing .highlighted {
   background: #ffffff;
   color: var(--ink);
 }
 
-.highlighted p {
+.pricing .highlighted h3 {
+  color: var(--ink);
+}
+
+.pricing .highlighted p {
   color: var(--muted);
+}
+
+.pricing .highlighted .plan {
+  color: var(--accent);
 }
 
 .formSection {
