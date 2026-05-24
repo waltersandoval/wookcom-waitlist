@@ -8,7 +8,8 @@ export default function Gracias() {
         <h1>Gracias por aplicar</h1>
         <p>
           Ya recibimos tu informacion para el diagnostico fundador de Wookcom.
-          El siguiente paso es revisar el caso de uso y confirmar si hay buen fit.
+          El siguiente paso es revisar tu negocio, detectar el caso de uso correcto
+          y confirmar si hay buen fit para el setup.
         </p>
         <Link className="button primary" href="/">
           Volver a la landing

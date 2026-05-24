@@ -18,24 +18,24 @@ const useCases = [
 ];
 
 const deliverables = [
-  "Diagnostico del negocio y tareas repetitivas",
+  "Diagnostico del negocio en 4 areas",
   "Seleccion de un caso de uso con valor visible",
-  "Configuracion del operador IA",
+  "Decision de ruta: IA, automatizacion, formacion o proceso",
+  "Implementacion del primer sistema util",
   "Base de conocimiento inicial",
-  "Plantillas de prompts y flujos",
   "Reglas de seguridad y limites",
   "Prueba con una tarea real",
   "Manual breve de uso",
-  "Sesion de entrenamiento",
   "7 dias de soporte ligero"
 ];
 
 const steps = [
-  ["Diagnostico", "Entendemos tu negocio, tus tareas repetitivas y el resultado que quieres."],
-  ["Diseno", "Definimos rol, memoria, permisos, limites y flujo principal."],
-  ["Setup", "Configuramos documentos, instrucciones, prompts y procedimientos."],
+  ["Diagnostico", "Revisamos delivery, administracion, marketing y ventas antes de proponer IA."],
+  ["Ruta", "Decidimos si conviene IA, automatizacion, formacion, consultoria o proceso manual."],
+  ["Diseno", "Definimos la solucion correcta: sistema IA, automatizacion, formacion o proceso."],
+  ["Setup", "Configuramos documentos, instrucciones, prompts, procedimientos o flujos."],
   ["Prueba real", "Ejecutamos una tarea concreta y ajustamos el sistema."],
-  ["Entrenamiento", "Te dejamos usando el operador con manual breve y siguientes pasos."]
+  ["Entrenamiento", "Te dejamos usando la solucion con manual breve y siguientes pasos."]
 ];
 
 export default function Home() {
@@ -56,15 +56,15 @@ export default function Home() {
 
         <div className="heroGrid">
           <div className="heroCopy">
-            <p className="eyebrow">Cupos fundadores en USD</p>
+            <p className="eyebrow">Diagnostico + setup fundador</p>
             <h1>
-              Monta tu primer <span>operador IA</span>
+              Diagnostica tu negocio y aplica <span>IA con criterio</span>
               <br />
               en 7 dias
             </h1>
             <p className="lead">
-              Wookcom convierte tus herramientas de IA sueltas en un sistema de trabajo
-              con memoria de tu negocio, flujos utiles y reglas de seguridad.
+              Wookcom revisa tu operacion, detecta donde la IA puede generar valor real
+              y construye la primera solucion util: sistema, automatizacion, formacion o proceso.
             </p>
             <div className="heroActions">
               <a className="button primary" href="#formulario">
@@ -75,23 +75,24 @@ export default function Home() {
               </a>
             </div>
             <p className="microcopy">
-              Empezamos con un caso de uso concreto. Sin prometer automatizacion total.
+              Primero entendemos tu operacion; luego decidimos que conviene automatizar.
             </p>
           </div>
 
-          <aside className="operatorPanel" aria-label="Resumen del operador IA">
+          <aside className="operatorPanel" aria-label="Resumen del diagnostico IA">
             <div className="terminalTop">
               <span />
               <span />
               <span />
             </div>
             <div className="operatorBody">
-              <p className="panelLabel">Operador IA Starter</p>
-              <h2>Memoria + flujos + seguridad</h2>
+              <p className="panelLabel">Diagnostico IA Starter</p>
+              <h2>Diagnostico + ruta + implementacion</h2>
               <ul>
+                <li>Revision de 4 areas</li>
                 <li>Contexto real del negocio</li>
-                <li>Prompts reutilizables</li>
-                <li>Limites de accion</li>
+                <li>Solucion segun necesidad</li>
+                <li>Limites y riesgos claros</li>
                 <li>Prueba con tarea real</li>
               </ul>
               <div className="statusRow">
@@ -116,9 +117,8 @@ export default function Home() {
               sigue tus reglas y no esta conectada a tus procesos reales.
             </p>
             <p>
-              Eso termina en respuestas inconsistentes, prompts regados, tareas
-              duplicadas y la sensacion de que la IA podria ayudarte mas, pero todavia
-              no sabes como aterrizarla.
+              Automatizar sin diagnostico tambien puede crear cuellos de botella en
+              ventas, marketing, administracion o entrega. Primero hay que entender el sistema.
             </p>
           </div>
         </div>
@@ -128,10 +128,10 @@ export default function Home() {
         <div className="sectionInner">
           <div className="sectionHeader">
             <p className="eyebrow">La solucion</p>
-            <h2>Un operador IA acotado, util y seguro</h2>
+            <h2>Diagnostico primero. Implementacion despues.</h2>
             <p>
-              No es un curso ni un pack de prompts. Es un setup inicial para que la IA
-              empiece a ayudarte con trabajo real.
+              No es un curso ni un pack de prompts. Es consultoria aplicada y setup inicial
+              para elegir la solucion correcta antes de automatizar de mas.
             </p>
           </div>
 
@@ -193,12 +193,12 @@ export default function Home() {
             <article className="priceCard">
               <p className="plan">Reserva</p>
               <h3>USD 29</h3>
-              <p>Diagnostico inicial y prioridad para entrar al setup Starter.</p>
+              <p>Diagnostico de 4 areas y prioridad para entrar al setup Starter.</p>
             </article>
             <article className="priceCard highlighted">
               <p className="plan">Setup Starter</p>
               <h3>USD 297</h3>
-              <p>1 operador IA, 1 caso de uso principal, entrenamiento y 7 dias de soporte.</p>
+              <p>Diagnostico, 1 solucion inicial, entrenamiento y 7 dias de soporte.</p>
             </article>
             <article className="priceCard">
               <p className="plan">Continuidad</p>
@@ -215,8 +215,8 @@ export default function Home() {
             <p className="eyebrow">Aplicacion</p>
             <h2>Reserva tu diagnostico fundador</h2>
             <p className="bodyText">
-              Cuéntame qué quieres que haga tu operador IA. Si hay buen fit, seguimos
-              con el cupo fundador de USD 29 y el setup Starter.
+              Cuéntame qué quieres mejorar en tu negocio. Si hay buen fit, hacemos diagnostico,
+              reservamos el cupo fundador y pasamos al setup Starter.
             </p>
             <div className="trustBox">
               <strong>Alcance seguro desde el inicio</strong>
@@ -251,12 +251,12 @@ export default function Home() {
               </select>
             </label>
             <label>
-              Que quieres que haga tu operador IA
+              Que quieres mejorar con IA o automatizacion
               <textarea
                 name="desiredOperator"
                 required
                 rows={4}
-                placeholder="Ej. ayudarme con contenido, investigacion, ventas o documentacion"
+                placeholder="Ej. contenido, investigacion, ventas, documentacion o procesos internos"
               />
             </label>
             <label>

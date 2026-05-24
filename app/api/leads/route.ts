@@ -6,7 +6,7 @@ function formatDiscordMessage(payload: LeadPayload): string {
     `>>> **Nombre:** ${payload.name}\n` +
     `**Contacto:** ${payload.contact}\n` +
     `**Tipo de negocio:** ${payload.businessType}\n` +
-    `**Quiere que el operador haga:** ${payload.desiredOperator}\n` +
+    `**Quiere mejorar con IA:** ${payload.desiredOperator}\n` +
     `**Herramientas actuales:** ${payload.currentTools || "No indicado"}\n` +
     `**Miedo/duda:** ${payload.mainConcern || "No indicado"}\n` +
     `**Fuente:** ${payload.source}\n` +
@@ -91,7 +91,7 @@ function formatLead(payload: LeadPayload): { subject: string; html: string } {
       <div class="value">${payload.businessType}</div>
     </div>
     <div class="field">
-      <div class="label">Qué quieres que haga el operador IA</div>
+      <div class="label">Qué quiere mejorar con IA o automatizacion</div>
       <div class="value">${payload.desiredOperator}</div>
     </div>
     <div class="field">
