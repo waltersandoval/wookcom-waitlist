@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./styles.css";
 
 export const metadata: Metadata = {
-  title: "Wookcom | Diagnostico e implementacion IA en 7 dias",
+  title: "Wookcom | Diagnostico e implementacion IA para negocios",
   description:
-    "Diagnostica tu negocio y aplica IA con una primera solucion util, segura y conectada a tus procesos.",
+    "Diagnostico, criterio e implementacion IA para negocios que quieren aplicar tecnologia sin automatizar a ciegas.",
   openGraph: {
-    title: "Wookcom | Diagnostica tu negocio y aplica IA con criterio",
+    title: "Wookcom | Diagnostico, criterio e implementacion IA",
     description:
-      "Cupos fundadores para creadores, freelancers y negocios que quieren diagnostico, criterio e implementacion IA.",
+      "Cupos fundadores para negocios que quieren una primera solucion IA util, segura y documentada.",
     type: "website"
   }
 };

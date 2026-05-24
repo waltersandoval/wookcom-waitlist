@@ -1,41 +1,82 @@
-const useCases = [
+const solutionTypes = [
+  "Diagnostico IA",
+  "Sistemas internos",
+  "Automatizaciones",
+  "Dashboards",
+  "Procesos",
+  "Formacion",
+  "Memoria del negocio",
+  "Prompts operativos",
+  "Documentacion",
+  "Mini software",
+  "Ventas",
+  "Contenido"
+];
+
+const journey = [
   {
-    title: "Contenido",
-    text: "Ideas, guiones, calendario, reutilizacion de notas y consistencia de marca."
+    title: "Diagnostica",
+    text: "Revisamos delivery, administracion, marketing y ventas antes de proponer tecnologia."
   },
   {
-    title: "Investigacion",
-    text: "Competidores, tendencias, resumenes de fuentes y oportunidades de mercado."
+    title: "Construye",
+    text: "Elegimos una ruta: IA, automatizacion, formacion, proceso, dashboard o mini software."
   },
   {
-    title: "Ventas ligeras",
-    text: "Mensajes, seguimiento, objeciones y preparacion de conversaciones."
-  },
-  {
-    title: "Documentacion",
-    text: "Ordenar audios, videos, procesos, notas y conocimiento del negocio."
+    title: "Entrega",
+    text: "Probamos con una tarea real, documentamos el uso y dejamos siguientes mejoras claras."
   }
 ];
 
-const deliverables = [
-  "Diagnostico del negocio en 4 areas",
-  "Seleccion de un caso de uso con valor visible",
-  "Decision de ruta: IA, automatizacion, formacion o proceso",
-  "Implementacion del primer sistema util",
-  "Base de conocimiento inicial",
-  "Reglas de seguridad y limites",
-  "Prueba con una tarea real",
-  "Manual breve de uso",
-  "7 dias de soporte ligero"
+const benefits = [
+  ["Diagnostico primero", "No automatizamos a ciegas. Primero entendemos el negocio y sus cuellos de botella."],
+  ["Una solucion a la vez", "Enfocamos el primer setup en un caso de uso visible, seguro y medible."],
+  ["Criterio aplicado", "Te decimos si conviene IA, automatizacion, formacion, proceso o no implementar todavia."],
+  ["Documentacion real", "Cada entrega queda con memoria, instrucciones, reglas, prueba y manual de uso."],
+  ["Alcance seguro", "Sin accesos sensibles ni acciones externas sin revisar permisos y confirmacion humana."],
+  ["Base escalable", "Si funciona, el siguiente paso puede ser continuidad, fase 2, comunidad o infraestructura."]
 ];
 
-const steps = [
-  ["Diagnostico", "Revisamos delivery, administracion, marketing y ventas antes de proponer IA."],
-  ["Ruta", "Decidimos si conviene IA, automatizacion, formacion, consultoria o proceso manual."],
-  ["Diseno", "Definimos la solucion correcta: sistema IA, automatizacion, formacion o proceso."],
-  ["Setup", "Configuramos documentos, instrucciones, prompts, procedimientos o flujos."],
-  ["Prueba real", "Ejecutamos una tarea concreta y ajustamos el sistema."],
-  ["Entrenamiento", "Te dejamos usando la solucion con manual breve y siguientes pasos."]
+const deliverables = [
+  "Diagnostico de 4 areas",
+  "Mapa de oportunidades",
+  "Decision de ruta",
+  "Primera solucion funcional",
+  "Memoria del negocio",
+  "Reglas de seguridad",
+  "Prueba con tarea real",
+  "Manual de uso",
+  "Handoff y mejoras"
+];
+
+const proofCards = [
+  ["01", "Diagnostico", "Detectamos donde la IA crea valor sin romper ventas, entrega ni administracion."],
+  ["02", "Sistema", "Convertimos el caso elegido en una solucion operativa con memoria y limites."],
+  ["03", "Proceso", "El cliente recibe un flujo claro para pedir, revisar y repetir el trabajo."],
+  ["04", "Continuidad", "Lo que funciona se convierte en plantillas, soporte, fase 2 o producto interno."]
+];
+
+const faqs = [
+  [
+    "Esto es una agencia de agentes IA?",
+    "No. Wookcom es diagnostico e implementacion IA. Un agente puede ser una salida, pero no es el producto principal."
+  ],
+  [
+    "Que pasa si mi negocio no necesita IA todavia?",
+    "Se documenta la ruta correcta: proceso, formacion, orden interno o una implementacion mas pequena."
+  ],
+  [
+    "Cuanto tarda la primera entrega?",
+    "El Starter esta disenado para 7 dias con un caso de uso acotado y una tarea real de prueba."
+  ],
+  [
+    "Necesito saber programar?",
+    "No. La entrega incluye manual, entrenamiento y una solucion lista para operar con supervision humana."
+  ],
+  [
+    "Pueden conectar herramientas o datos sensibles?",
+    "Solo si el diagnostico lo justifica y con permisos claros. La V1 evita riesgos innecesarios."
+  ]
 ];
 
 export default function Home() {
@@ -47,78 +88,113 @@ export default function Home() {
             <img src="/brand/wookcom-logo.png" alt="Wookcom" />
           </a>
           <div className="navLinks">
+            <a href="#proceso">Proceso</a>
             <a href="#incluye">Incluye</a>
             <a href="#precio">Precio</a>
             <a className="navCta" href="#formulario">Aplicar</a>
           </div>
         </nav>
-        <div className="blueRibbon">Empieza con una sesion de valoracion.</div>
 
-        <div className="heroGrid">
+        <div className="heroInner">
+          <div className="heroTopline">
+            <span>Wookcom Diagnostico IA Starter</span>
+            <span>7 dias</span>
+            <span>Cupos fundadores</span>
+          </div>
+
           <div className="heroCopy">
-            <p className="eyebrow">Diagnostico + setup fundador</p>
-            <h1>
-              Diagnostica tu negocio y aplica <span>IA con criterio</span>
-              <br />
-              en 7 dias
-            </h1>
+            <p className="eyebrow">IA aplicada para negocios</p>
+            <h1>Diagnostico, criterio e implementacion IA bajo un mismo techo.</h1>
             <p className="lead">
               Wookcom revisa tu operacion, detecta donde la IA puede generar valor real
-              y construye la primera solucion util: sistema, automatizacion, formacion o proceso.
+              y construye una primera solucion util sin venderte automatizacion a ciegas.
             </p>
             <div className="heroActions">
               <a className="button primary" href="#formulario">
-                Reservar mi cupo fundador
+                Reservar cupo fundador
               </a>
-              <a className="button secondary" href="#incluye">
-                Ver que incluye
+              <a className="button secondary" href="#precio">
+                Ver precios
               </a>
             </div>
-            <p className="microcopy">
-              Primero entendemos tu operacion; luego decidimos que conviene automatizar.
-            </p>
           </div>
 
-          <aside className="operatorPanel" aria-label="Resumen del diagnostico IA">
-            <div className="terminalTop">
-              <span />
-              <span />
-              <span />
+          <aside className="heroCard" aria-label="Resumen Wookcom">
+            <div className="cardHeader">
+              <span>Diagnostico activo</span>
+              <strong>01 / 04</strong>
             </div>
-            <div className="operatorBody">
-              <p className="panelLabel">Diagnostico IA Starter</p>
-              <h2>Diagnostico + ruta + implementacion</h2>
-              <ul>
-                <li>Revision de 4 areas</li>
-                <li>Contexto real del negocio</li>
-                <li>Solucion segun necesidad</li>
-                <li>Limites y riesgos claros</li>
-                <li>Prueba con tarea real</li>
-              </ul>
-              <div className="statusRow">
-                <span>Entrega</span>
-                <strong>7 dias</strong>
-              </div>
+            <div className="scoreRing">
+              <span>4</span>
+              <small>areas</small>
+            </div>
+            <ul>
+              <li>Delivery y cumplimiento</li>
+              <li>Administracion</li>
+              <li>Marketing</li>
+              <li>Ventas</li>
+            </ul>
+            <div className="cardFooter">
+              <span>Salida</span>
+              <strong>Solucion V1 lista para probar</strong>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="section problem">
+      <section className="marquee" aria-label="Tipos de solucion">
+        <div>
+          {[...solutionTypes, ...solutionTypes].map((item, index) => (
+            <span key={`${item}-${index}`}>{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="statement">
+        <div className="sectionInner">
+          <p className="eyebrow">La forma correcta</p>
+          <h2>Primero entendemos el negocio. Despues decidimos si necesita IA.</h2>
+        </div>
+      </section>
+
+      <section className="section" id="proceso">
+        <div className="sectionInner">
+          <div className="sectionHeader centered">
+            <p className="eyebrow">El viaje del cliente</p>
+            <h2>Simple por fuera. Riguroso por dentro.</h2>
+            <p>
+              Un proceso productizado para que cada cliente pase por diagnostico,
+              construccion y entrega sin improvisar.
+            </p>
+          </div>
+
+          <div className="journeyGrid">
+            {journey.map((step, index) => (
+              <article className="journeyCard" key={step.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section darkBand">
         <div className="sectionInner split">
           <div>
-            <p className="eyebrow">El problema</p>
-            <h2>Usar IA no es lo mismo que tener un sistema</h2>
+            <p className="eyebrow">Modelo Wookcom</p>
+            <h2>No es un curso. No es un bot. No es una agencia de automatizaciones.</h2>
           </div>
-          <div className="bodyText">
+          <div className="bodyText lightText">
             <p>
-              Ya puedes pedirle cosas a ChatGPT, Gemini o Claude. El problema es que
-              cada conversacion empieza casi desde cero: no recuerda tu negocio, no
-              sigue tus reglas y no esta conectada a tus procesos reales.
+              El cliente compra claridad, criterio y una primera implementacion que pueda
+              usar. Si el diagnostico dice que conviene un agente, se construye. Si no,
+              se entrega la ruta correcta.
             </p>
             <p>
-              Automatizar sin diagnostico tambien puede crear cuellos de botella en
-              ventas, marketing, administracion o entrega. Primero hay que entender el sistema.
+              El objetivo es que Wookcom se perciba como un estudio de implementacion IA:
+              profesional, limitado por calidad y enfocado en resultados reales.
             </p>
           </div>
         </div>
@@ -127,20 +203,16 @@ export default function Home() {
       <section className="section" id="incluye">
         <div className="sectionInner">
           <div className="sectionHeader">
-            <p className="eyebrow">La solucion</p>
-            <h2>Diagnostico primero. Implementacion despues.</h2>
-            <p>
-              No es un curso ni un pack de prompts. Es consultoria aplicada y setup inicial
-              para elegir la solucion correcta antes de automatizar de mas.
-            </p>
+            <p className="eyebrow">Beneficios</p>
+            <h2>Lo que cambia cuando Wookcom entra al negocio.</h2>
           </div>
 
-          <div className="featureGrid">
-            {deliverables.map((item, index) => (
-              <div className="feature" key={item}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <p>{item}</p>
-              </div>
+          <div className="benefitGrid">
+            {benefits.map(([title, text]) => (
+              <article className="benefit" key={title}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -148,63 +220,81 @@ export default function Home() {
 
       <section className="section muted">
         <div className="sectionInner">
-          <div className="sectionHeader">
-            <p className="eyebrow">Casos de uso</p>
-            <h2>Elige un primer caso con valor visible</h2>
+          <div className="sectionHeader centered">
+            <p className="eyebrow">Entregables</p>
+            <h2>Todo lo necesario para que la solucion no dependa de memoria verbal.</h2>
           </div>
-          <div className="useCaseGrid">
-            {useCases.map((useCase) => (
-              <article className="useCase" key={useCase.title}>
-                <h3>{useCase.title}</h3>
-                <p>{useCase.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="sectionInner">
-          <div className="sectionHeader">
-            <p className="eyebrow">Proceso</p>
-            <h2>Como funciona</h2>
-          </div>
-          <div className="timeline">
-            {steps.map(([title, text], index) => (
-              <div className="step" key={title}>
-                <span>{index + 1}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
+          <div className="deliverableGrid">
+            {deliverables.map((item) => (
+              <div className="deliverable" key={item}>
+                {item}
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <section className="section">
+        <div className="sectionInner proofGrid">
+          {proofCards.map(([number, title, text]) => (
+            <article className="proofCard" key={title}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section pricing" id="precio">
-        <div className="sectionInner">
-          <div className="sectionHeader">
+        <div className="sectionInner pricingShell">
+          <div className="pricingCopy">
             <p className="eyebrow">Precio fundador</p>
-            <h2>Cupos limitados para validar con casos reales</h2>
+            <h2>Una primera solucion. Un proceso claro. Cero humo.</h2>
+            <p>
+              Empezamos con cupos limitados para validar casos reales, crear evidencia
+              y convertir cada entrega en un sistema repetible.
+            </p>
           </div>
-          <div className="pricingGrid">
-            <article className="priceCard">
+
+          <div className="priceStack">
+            <article className="priceCard compact">
               <p className="plan">Reserva</p>
               <h3>USD 29</h3>
-              <p>Diagnostico de 4 areas y prioridad para entrar al setup Starter.</p>
+              <p>Diagnostico inicial, revision de fit y prioridad para entrar al setup.</p>
             </article>
             <article className="priceCard highlighted">
+              <div className="priceBadge">Recomendado</div>
               <p className="plan">Setup Starter</p>
               <h3>USD 297</h3>
-              <p>Diagnostico, 1 solucion inicial, entrenamiento y 7 dias de soporte.</p>
+              <p>Diagnostico de 4 areas, una solucion inicial, prueba real, manual y 7 dias de soporte.</p>
+              <a className="button primary full" href="#formulario">
+                Aplicar al Starter
+              </a>
             </article>
-            <article className="priceCard">
+            <article className="priceCard compact">
               <p className="plan">Continuidad</p>
               <h3>USD 49/mes</h3>
-              <p>Soporte ligero, plantillas, mejoras y sesiones grupales.</p>
+              <p>Soporte ligero, mejoras, plantillas y sesiones de implementacion.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section faq">
+        <div className="sectionInner">
+          <div className="sectionHeader centered">
+            <p className="eyebrow">FAQ</p>
+            <h2>Preguntas antes de aplicar.</h2>
+          </div>
+          <div className="faqList">
+            {faqs.map(([question, answer]) => (
+              <details key={question}>
+                <summary>{question}</summary>
+                <p>{answer}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
@@ -213,16 +303,16 @@ export default function Home() {
         <div className="sectionInner formGrid">
           <div>
             <p className="eyebrow">Aplicacion</p>
-            <h2>Reserva tu diagnostico fundador</h2>
+            <h2>Veamos si Wookcom es buen fit para tu negocio.</h2>
             <p className="bodyText">
-              Cuéntame qué quieres mejorar en tu negocio. Si hay buen fit, hacemos diagnostico,
+              Cuéntame qué quieres mejorar. Si hay fit, hacemos diagnostico,
               reservamos el cupo fundador y pasamos al setup Starter.
             </p>
             <div className="trustBox">
               <strong>Alcance seguro desde el inicio</strong>
               <p>
-                No conectamos accesos sensibles sin revisar permisos, limites y
-                confirmacion humana.
+                No conectamos accesos sensibles ni automatizamos procesos criticos sin
+                revisar permisos, limites y confirmacion humana.
               </p>
             </div>
           </div>
@@ -271,7 +361,7 @@ export default function Home() {
                 placeholder="Ej. seguridad, precio, no saber usarlo, accesos..."
               />
             </label>
-            <input type="hidden" name="source" value="wookcom-waitlist-v1" />
+            <input type="hidden" name="source" value="wookcom-designjoy-v1" />
             <button className="button primary full" type="submit">
               Solicitar diagnostico fundador
             </button>
