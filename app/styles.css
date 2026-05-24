@@ -436,13 +436,21 @@ details {
 }
 
 .deliverable {
+  align-items: center;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--ink);
+  display: inline-flex;
   font-size: 15px;
   font-weight: 900;
+  gap: 10px;
   padding: 12px 16px;
+}
+
+.deliverable .material-symbols-outlined {
+  color: var(--accent);
+  font-size: 22px;
 }
 
 .proofGrid {

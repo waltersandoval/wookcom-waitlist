@@ -1,12 +1,12 @@
 const solutionTypes = [
-  "Diagnostico IA",
-  "Sistemas internos",
-  "Automatizaciones",
-  "Dashboards",
+  "Diagnostico",
+  "Sistema operativo",
+  "Automatizacion",
+  "Dashboard",
   "Procesos",
   "Formacion",
   "Memoria del negocio",
-  "Prompts operativos",
+  "Guias operativas",
   "Documentacion",
   "Mini software",
   "Ventas",
@@ -15,67 +15,67 @@ const solutionTypes = [
 
 const processSteps = [
   {
-    title: "Revisamos tu negocio",
-    text: "Revisamos delivery, administracion, marketing y ventas antes de proponer tecnologia."
+    title: "Entendemos tu negocio",
+    text: "Revisamos como trabajas hoy: entregas, administracion, marketing y ventas. Sin jerga tecnica."
   },
   {
-    title: "Definimos la solucion",
-    text: "Decidimos si conviene IA, automatizacion, formacion, proceso, dashboard o mini software."
+    title: "Elegimos que conviene",
+    text: "Decidimos si realmente necesitas IA, una automatizacion simple, ordenar procesos o simplemente formacion."
   },
   {
-    title: "La dejamos funcionando",
-    text: "Probamos con una tarea real, documentamos el uso y dejamos siguientes mejoras claras."
+    title: "Lo dejamos funcionando",
+    text: "Probamos con algo de tu dia a dia, te explicamos como usarlo y dejas claro el siguiente paso."
   }
 ];
 
 const benefits = [
-  ["Diagnostico primero", "No automatizamos a ciegas. Primero entendemos el negocio y sus cuellos de botella."],
-  ["Una solucion a la vez", "Enfocamos el primer setup en un caso de uso visible, seguro y medible."],
-  ["Recomendacion concreta", "Te decimos si conviene IA, automatizacion, formacion, proceso o no implementar todavia."],
-  ["Documentacion real", "Cada entrega queda con memoria, instrucciones, reglas, prueba y manual de uso."],
-  ["Alcance seguro", "Sin accesos sensibles ni acciones externas sin revisar permisos y confirmacion humana."],
-  ["Base escalable", "Si funciona, el siguiente paso puede ser continuidad, fase 2, comunidad o infraestructura."]
+  ["Primero diagnosticamos", "No llegamos a venderte tecnologia. Primero entendemos tu negocio y detectamos que esta fallando."],
+  ["Un problema a la vez", "Elegimos un solo caso concreto para resolver. Nada de querer automatizar todo de golpe."],
+  ["Te decimos la verdad", "Si no necesitas IA todavia, te lo decimos. A veces lo que hace falta es orden, formacion o un proceso mas claro."],
+  ["Todo queda escrito", "Cada entrega incluye instrucciones, reglas, pruebas y un manual para que cualquiera lo entienda."],
+  ["Sin riesgos innecesarios", "No conectamos datos sensibles ni hacemos cambios sin tu aprobacion. Seguridad desde el dia uno."],
+  ["Preparado para crecer", "Si funciona, podemos escalar. Si no, sabes exactamente que ajustar."]
 ];
 
 const deliverables = [
-  "Diagnostico de 4 areas",
-  "Mapa de oportunidades",
-  "Recomendacion tecnica",
-  "Primera solucion funcional",
-  "Memoria del negocio",
-  "Reglas de seguridad",
-  "Prueba con tarea real",
-  "Manual de uso",
-  "Handoff y mejoras"
+  { icon: "monitoring", text: "Diagnostico completo de como funciona tu negocio hoy" },
+  { icon: "explore", text: "Donde hay oportunidades faciles que no has visto" },
+  { icon: "lightbulb", text: "Que necesitas hacer, explicado paso a paso y sin palabras raras" },
+  { icon: "rocket_launch", text: "Algo concreto que ya puedes usar y probar desde el dia uno" },
+  { icon: "psychology", text: "Toda la logica y decisiones del negocio guardadas, no en la cabeza de alguien" },
+  { icon: "security", text: "Reglas basicas para proteger tu informacion sin complicaciones" },
+  { icon: "fact_check", text: "Una prueba con una tarea real tuya para asegurarnos que funciona" },
+  { icon: "menu_book", text: "Un manual simple para que cualquiera de tu equipo lo entienda" },
+  { icon: "sync", text: "Te explicamos como funciona todo y como seguir mejorando" }
 ];
 
 const proofCards = [
-  ["01", "Diagnostico", "Detectamos donde la IA crea valor sin romper ventas, entrega ni administracion."],
-  ["02", "Sistema", "Convertimos el caso elegido en una solucion operativa con memoria y limites."],
-  ["03", "Proceso", "El cliente recibe un flujo claro para pedir, revisar y repetir el trabajo."],
-  ["04", "Continuidad", "Lo que funciona se convierte en plantillas, soporte, fase 2 o producto interno."]
+  ["01", "Diagnostico", "Entendemos tu operacion antes de proponer cualquier cambio. Sin diagnosticos genericos."],
+  ["02", "Solucion", "Construimos una primera version util, con memoria de tu negocio y limites claros."],
+  ["03", "Prueba", "Ejecutamos una tarea real tuya para verificar que funciona y ajustamos lo que haga falta."],
+  ["04", "Futuro", "Lo que funciona se convierte en proceso repetible. Lo que no, se descarta sin culpa."]
 ];
 
 const faqs = [
   [
-    "Esto es una agencia de agentes IA?",
-    "No. Wookcom es diagnostico e implementacion IA. Un agente puede ser una salida, pero no es el producto principal."
+    "Esto es solo para empresas grandes?",
+    "No. Wookcom esta pensado para creadores, freelancers, duenos de negocio y fundadores no tecnicos."
   ],
   [
-    "Que pasa si mi negocio no necesita IA todavia?",
-    "Se documenta la recomendacion correcta: proceso, formacion, orden interno o una implementacion mas pequena."
+    "Que pasa si mi negocio no necesita tecnologia todavia?",
+    "Te lo decimos claro y te damos la recomendacion que realmente aplica: ordenar procesos, formacion o una solucion mas simple."
   ],
   [
     "Cuanto tarda la primera entrega?",
-    "El Starter esta disenado para 7 dias con un caso de uso acotado y una tarea real de prueba."
+    "El plan Starter son 7 dias para un caso concreto, con prueba incluida."
   ],
   [
-    "Necesito saber programar?",
-    "No. La entrega incluye manual, entrenamiento y una solucion lista para operar con supervision humana."
+    "Necesito saber de tecnologia?",
+    "No. Todo se entrega explicado, con manual y listo para usar con supervision simple."
   ],
   [
-    "Pueden conectar herramientas o datos sensibles?",
-    "Solo si el diagnostico lo justifica y con permisos claros. La V1 evita riesgos innecesarios."
+    "Van a conectar mis datos o cuentas?",
+    "Solo si el caso lo justifica y con tu aprobacion explicita. La prioridad es mantener tu negocio seguro."
   ]
 ];
 
@@ -104,10 +104,11 @@ export default function Home() {
 
           <div className="heroCopy">
             <p className="eyebrow">IA aplicada para negocios</p>
-            <h1>Aplicamos IA a tu negocio con diagnostico y una solucion lista para usar.</h1>
+            <h1>Diagnosticamos tu negocio y te dejamos una primera solucion funcionando.</h1>
             <p className="lead">
-              Wookcom revisa tu operacion, detecta donde la IA puede generar valor real
-              y construye una primera solucion util sin venderte automatizacion a ciegas.
+              Sin diagnosticos genericos ni promesas de automatizacion total. Revisamos
+              como trabajas hoy, detectamos que se puede mejorar y construimos la primera
+              solucion que realmente te sirve.
             </p>
             <div className="heroActions">
               <a className="button primary" href="#formulario">
@@ -152,8 +153,8 @@ export default function Home() {
 
       <section className="statement">
         <div className="sectionInner">
-          <p className="eyebrow">La forma correcta</p>
-          <h2>Primero entendemos el negocio. Despues decidimos si necesita IA.</h2>
+          <p className="eyebrow">Nuestra forma de trabajar</p>
+          <h2>No empezamos con tecnologia. Empezamos entendiendo tu negocio.</h2>
         </div>
       </section>
 
@@ -188,9 +189,9 @@ export default function Home() {
           </div>
           <div className="bodyText lightText">
             <p>
-              El cliente compra claridad, criterio y una primera implementacion que pueda
-              usar. Si el diagnostico dice que conviene un agente, se construye. Si no,
-              se entrega la recomendacion correcta.
+              El cliente no compra tecnologia. Compra claridad, orden y una primera
+              solucion que pueda usar sin volverse experto. Si conviene un sistema con
+              IA, lo construimos. Si no, decimos que hacer en su lugar.
             </p>
             <p>
               El objetivo es que Wookcom se perciba como un estudio de implementacion IA:
@@ -227,8 +228,9 @@ export default function Home() {
 
           <div className="deliverableGrid">
             {deliverables.map((item) => (
-              <div className="deliverable" key={item}>
-                {item}
+              <div className="deliverable" key={item.text}>
+                <span className="material-symbols-outlined">{item.icon}</span>
+                {item.text}
               </div>
             ))}
           </div>
