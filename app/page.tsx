@@ -97,8 +97,8 @@ export default function Home() {
 
         <div className="heroInner">
           <div className="heroTopline">
-            <span>Wookcom Diagnostico IA Starter</span>
-            <span>7 dias</span>
+            <span>Diagnostico para tu negocio</span>
+            <span>Primera entrega en 7 dias</span>
             <span>Cupos fundadores</span>
           </div>
 
@@ -122,22 +122,22 @@ export default function Home() {
 
           <aside className="heroCard" aria-label="Resumen Wookcom">
             <div className="cardHeader">
-              <span>Diagnostico activo</span>
-              <strong>01 / 04</strong>
+              <span>Revisamos tu negocio</span>
+              <strong>paso 1</strong>
             </div>
             <div className="scoreRing">
               <span>4</span>
-              <small>areas</small>
+              <small>areas clave</small>
             </div>
             <ul>
-              <li>Delivery y cumplimiento</li>
-              <li>Administracion</li>
-              <li>Marketing</li>
-              <li>Ventas</li>
+              <li>Como le entregas valor a tus clientes</li>
+              <li>La parte administrativa y el orden interno</li>
+              <li>Como te das a conocer y atraes clientes</li>
+              <li>Como vendes y conviertes</li>
             </ul>
             <div className="cardFooter">
-              <span>Entrega</span>
-              <strong>Solucion V1 lista para probar</strong>
+              <span>Resultado</span>
+              <strong>Una solucion lista para que la uses</strong>
             </div>
           </aside>
         </div>
