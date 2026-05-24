@@ -13,17 +13,17 @@ const solutionTypes = [
   "Contenido"
 ];
 
-const journey = [
+const processSteps = [
   {
-    title: "Diagnostica",
+    title: "Revisamos tu negocio",
     text: "Revisamos delivery, administracion, marketing y ventas antes de proponer tecnologia."
   },
   {
-    title: "Construye",
-    text: "Elegimos una ruta: IA, automatizacion, formacion, proceso, dashboard o mini software."
+    title: "Definimos la solucion",
+    text: "Decidimos si conviene IA, automatizacion, formacion, proceso, dashboard o mini software."
   },
   {
-    title: "Entrega",
+    title: "La dejamos funcionando",
     text: "Probamos con una tarea real, documentamos el uso y dejamos siguientes mejoras claras."
   }
 ];
@@ -31,7 +31,7 @@ const journey = [
 const benefits = [
   ["Diagnostico primero", "No automatizamos a ciegas. Primero entendemos el negocio y sus cuellos de botella."],
   ["Una solucion a la vez", "Enfocamos el primer setup en un caso de uso visible, seguro y medible."],
-  ["Criterio aplicado", "Te decimos si conviene IA, automatizacion, formacion, proceso o no implementar todavia."],
+  ["Recomendacion concreta", "Te decimos si conviene IA, automatizacion, formacion, proceso o no implementar todavia."],
   ["Documentacion real", "Cada entrega queda con memoria, instrucciones, reglas, prueba y manual de uso."],
   ["Alcance seguro", "Sin accesos sensibles ni acciones externas sin revisar permisos y confirmacion humana."],
   ["Base escalable", "Si funciona, el siguiente paso puede ser continuidad, fase 2, comunidad o infraestructura."]
@@ -40,7 +40,7 @@ const benefits = [
 const deliverables = [
   "Diagnostico de 4 areas",
   "Mapa de oportunidades",
-  "Decision de ruta",
+  "Recomendacion tecnica",
   "Primera solucion funcional",
   "Memoria del negocio",
   "Reglas de seguridad",
@@ -63,7 +63,7 @@ const faqs = [
   ],
   [
     "Que pasa si mi negocio no necesita IA todavia?",
-    "Se documenta la ruta correcta: proceso, formacion, orden interno o una implementacion mas pequena."
+    "Se documenta la recomendacion correcta: proceso, formacion, orden interno o una implementacion mas pequena."
   ],
   [
     "Cuanto tarda la primera entrega?",
@@ -104,7 +104,7 @@ export default function Home() {
 
           <div className="heroCopy">
             <p className="eyebrow">IA aplicada para negocios</p>
-            <h1>Diagnostico, criterio e implementacion IA bajo un mismo techo.</h1>
+            <h1>Aplicamos IA a tu negocio con diagnostico y una solucion lista para usar.</h1>
             <p className="lead">
               Wookcom revisa tu operacion, detecta donde la IA puede generar valor real
               y construye una primera solucion util sin venderte automatizacion a ciegas.
@@ -135,7 +135,7 @@ export default function Home() {
               <li>Ventas</li>
             </ul>
             <div className="cardFooter">
-              <span>Salida</span>
+              <span>Entrega</span>
               <strong>Solucion V1 lista para probar</strong>
             </div>
           </aside>
@@ -160,16 +160,16 @@ export default function Home() {
       <section className="section" id="proceso">
         <div className="sectionInner">
           <div className="sectionHeader centered">
-            <p className="eyebrow">El viaje del cliente</p>
-            <h2>Simple por fuera. Riguroso por dentro.</h2>
+            <p className="eyebrow">Como funciona</p>
+            <h2>Un proceso claro para saber donde aplicar IA y que construir primero.</h2>
             <p>
-              Un proceso productizado para que cada cliente pase por diagnostico,
-              construccion y entrega sin improvisar.
+              Empezamos entendiendo tu negocio, elegimos un caso de uso y dejamos
+              una primera solucion probada con una tarea real.
             </p>
           </div>
 
           <div className="journeyGrid">
-            {journey.map((step, index) => (
+            {processSteps.map((step, index) => (
               <article className="journeyCard" key={step.title}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{step.title}</h3>
@@ -190,7 +190,7 @@ export default function Home() {
             <p>
               El cliente compra claridad, criterio y una primera implementacion que pueda
               usar. Si el diagnostico dice que conviene un agente, se construye. Si no,
-              se entrega la ruta correcta.
+              se entrega la recomendacion correcta.
             </p>
             <p>
               El objetivo es que Wookcom se perciba como un estudio de implementacion IA:
@@ -204,7 +204,7 @@ export default function Home() {
         <div className="sectionInner">
           <div className="sectionHeader">
             <p className="eyebrow">Beneficios</p>
-            <h2>Lo que cambia cuando Wookcom entra al negocio.</h2>
+            <h2>Como te ayuda Wookcom.</h2>
           </div>
 
           <div className="benefitGrid">
@@ -251,7 +251,7 @@ export default function Home() {
         <div className="sectionInner pricingShell">
           <div className="pricingCopy">
             <p className="eyebrow">Precio fundador</p>
-            <h2>Una primera solucion. Un proceso claro. Cero humo.</h2>
+            <h2>Una primera solucion clara, probada y documentada.</h2>
             <p>
               Empezamos con cupos limitados para validar casos reales, crear evidencia
               y convertir cada entrega en un sistema repetible.
